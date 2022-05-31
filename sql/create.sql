@@ -16,8 +16,12 @@ CREATE TABLE Boek (
                          Author VARCHAR(50),
 
                          PRIMARY KEY (id),
+   
+                         rating VARCHAR(20),
 
-                         afbeelding VARCHAR(20),
+                         prijs VARCHAR(20),
 
-                      Informatie VARCHAR(700)
+                      Informatie VARCHAR(700),
+
+                    afbeelding VARCHAR(100)
 );

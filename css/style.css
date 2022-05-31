@@ -19,7 +19,6 @@
     flex-grow: 2;
     flex-row:1 ;
     max-height: 900px;
-
     border:1px solid #000000;
 }
 
@@ -82,9 +81,17 @@ header {
     align-items: center;
 }
 
-th{
+.box{
     border: 1px solid #428dcc;
-    padding: 20px;
+    padding-left: 320px;
+   margin-left:25%;
+   margin-right: 25%;
+    margin-bottom:10px;
+    
+}
+
+.ruimte{
+    width: 200px;
 }
 
 /* De Top lijst boeken 1 tot 10 informatie pagina */
@@ -113,6 +120,32 @@ float: right;
     overflow: hidden;
 padding-top: 300px;
     padding-right: 50px;
+}
+
+.boek_foto{
+    height: auto;
+    width: auto;
+    max-width: 30%;
+    max-height: 30%;
+   
+    
+}
+
+/* detail page css */
+.detail_boek_foto{
+    right:0;
+    position:fixed;
+    width: 35vh;
+    height: 45vh;
+    margin-right: 20vh;
+}
+
+.doos{
+    width: 300px;
+    height: 100px;
+    margin-right: auto;
+    margin-left:20vh;
+    font-size: 2,8vh;
 }
 
 /*.row{
