@@ -53,7 +53,7 @@ echo "<tr> <div class= 'box'>";
 
 Echo "<td> <a href='details.php?id={$row['id']}'> <div class='ruimte'> De title {$row['Title']}</div></a></td>" ;	  
 /* DE ?ID=$row['id'] komt er boven aan de display id=1 Door de get function bij de details.php word de id gehaald en daardoor kan ie de specifieke
-data uit de database halen van die id */
+data uit de database halen van die id | de schijding maak je met?*/
 Echo "<td>" . "<div class='ruimte'>" . 'rating' . "  " .$row["rating"] . "</div> " . "</td>";
 Echo "<td>" . "<div class='ruimte'>" . "De Prijs" .$row["prijs"] . "</div> " . "</td>" ;
 Echo "<td> <figure class='right'>" . "<img  class='boek_foto' src='../img/" . $row["afbeelding"] . "'> </figure<td>" ;
