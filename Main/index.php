@@ -1,7 +1,7 @@
 <?php include "../include/head.php";
 
  include "../include/navbar.php";?>
-
+<!--
 <div class="column">
     <table cellspacing="10px">
 <tr>
@@ -34,34 +34,48 @@
 <tr>
     <th><a href="Top_10_Boeken/Boek-10.php.php">10. The Dream Of The Red Chamber</a></th>
 </tr>
-    </table>
-</div>
+    </table> !-->
 
-<div class="footer">
-<div class="footer-text-left">footer</div>
-</div>
+    <h1 style="font-size:50px"> The top 10 books of the world </h1>
 
+    <?php include "../connect/connect.php";
 
-<?php
+$sql = "SELECT * FROM boek ORDER BY rating DESC";
 
-include "../connect/connect.php";
+$sth = $db->prepare($sql);
 
-$sql = "SELECT * FROM boek";
+$sth -> execute();
 
-$st = $db->prepare($sql);
+$nummer = 1;
 
-$st -> execute();
+while($row = $sth->fetch()) {
+echo "<tr> <div class= 'box'>";
 
-while($row = $st->fetch()) {
-echo "<tr>";
+Echo "<td> <a href='details.php?id={$row['id']}'> <div class='ruimte'> De title {$row['Title']}</div></a></td>" ;	  
+/* DE ?ID=$row['id'] komt er boven aan de display id=1 Door de get function bij de details.php word de id gehaald en daardoor kan ie de specifieke
+data uit de database halen van die id */
+Echo "<td>" . "<div class='ruimte'>" . 'rating' . "  " .$row["rating"] . "</div> " . "</td>";
+Echo "<td>" . "<div class='ruimte'>" . "De Prijs" .$row["prijs"] . "</div> " . "</td>" ;
+Echo "<td> <figure class='right'>" . "<img  class='boek_foto' src='../img/" . $row["afbeelding"] . "'> </figure<td>" ;
+/*Echo '<a href="details.php?id=" . $row['id'] ."> Details </a>';*/
 
-Echo "<td>" . $row["titel"] . "</td>";
-Echo "<td>" . $row["author"] . "</td>";
-Echo "<td>" . $row["rating"] . "</td>";
-Echo "<td>" . $row["afbeelding"] . "</td>";
-Echo "<td> <img src=/image/" . $row["afbeelding"] . "<td>";
-
-echo "</tr>";
+echo "</tr>  </div>";
+$nummer++;
 }
 ?>
+
+
+<!--<div class="footer">
+<div class="footer-text-left">footer</div>
+</div>  !-->
+
+
+
+<!--   SELECt *FROM boek ORDER BY rating  DESC LIMIT 10; 
+
+
+Echo "<td> . $nummer . </td>"
+Echo "<td>" . $row['titel'] . "</td>"
+-->
+
 <?php include "../include/footer.php" ?>
