@@ -155,9 +155,10 @@ padding-top: 300px;
 /* Contact formulier wrapper */
 .wrapper{
     width: 500px;
-    height: 370px;
+    height: 400px;
     background: white;
-    backdrop-filter: blur(10px);
+    box-shadow: 8px 5px 2px 0px #1d2d44;
+    /*werk als volgt 8px is horizontaal 5px is verticaal 2px is erg het blurt en 0px is hoever die uitspreid en daarna de kleur van de shawdow */
     padding: 30px;
     border-radius: 10px;
     border:1px solid black;
