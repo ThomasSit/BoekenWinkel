@@ -23,5 +23,11 @@ CREATE TABLE Boek (
 
                       Informatie VARCHAR(700),
 
-                    afbeelding VARCHAR(100)
+                    afbeelding VARCHAR(100),
+
+                    published VARCHAR(100),
+
+                    taal VARCHAR(100)
 );
+
+

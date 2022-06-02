@@ -134,7 +134,7 @@ padding-top: 300px;
 /* detail page css */
 .detail_boek_foto{
     right:0;
-    position:fixed;
+    position:absolute;
     width: 35vh;
     height: 45vh;
     margin-right: 20vh;
@@ -164,7 +164,9 @@ padding-top: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
+ /*Translate werkt als volgt je hebt de x en y as en met aangeven met % of px 
+ kan je de box of item verplaatsen          */
 }
 
 .section1, .section2 ,.section3, .section4{

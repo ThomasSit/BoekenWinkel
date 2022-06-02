@@ -4,7 +4,9 @@ include "../include/navbar.php" ?>
 
 <div class="wrapper">
 
-<form action="contact.php" method="post">
+<form action="contact.php" method="post" >
+    <h1> Wij helpen je graag veder <br> stuur ons een bericht  </h1>
+
     <div class="section1">
     <label for="name">Naam</label>
     <input type="text" name="name" id="name"><br>
@@ -24,12 +26,22 @@ include "../include/navbar.php" ?>
     </div>
 
 </form>
-</div>
+
+
 <?php
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $vraag = $_POST['vraag'];
+
+    echo "$name <br>, $email <br>, $vraag <br>";
+ }
 
 
 ?>
 
+</div>
 
 
 <?php include "../include/footer.php" ?>

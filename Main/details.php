@@ -23,7 +23,11 @@ echo $boek['rating'] . "<br>";
 
 echo $boek['prijs'] . "<br>";	
 
-echo $boek['Informatie'] . "<br>";
+echo $boek['Informatie'] . "<br><br>";
+
+echo $boek['published'] . "<br>";
+
+echo $boek['taal'] . "<br>";
 
 echo " </div>";
 
