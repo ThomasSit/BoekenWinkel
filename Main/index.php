@@ -65,6 +65,7 @@ $nummer++;
 ?>
 
 
+
 <!--<div class="footer">
 <div class="footer-text-left">footer</div>
 </div>  !-->
@@ -79,3 +80,6 @@ Echo "<td>" . $row['titel'] . "</td>"
 -->
 
 <?php include "../include/footer.php" ?>
+
+
+

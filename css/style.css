@@ -8,6 +8,9 @@
     font-weight: 400;
 }
 
+body{
+    background-color:#f6cd8b
+}
 
 .container {
     display: flex;
@@ -82,7 +85,7 @@ header {
 }
 
 .box{
-    border: 1px solid #428dcc;
+    border:  solid #428dcc;
     padding-left: 320px;
    margin-left:25%;
    margin-right: 25%;
@@ -197,6 +200,11 @@ text-align: center;
   padding: 5px;
     word-spacing:20px;
     color:white;
+}
+
+.error{
+    color:red;
+    text-decoration: red;
 }
 
 
