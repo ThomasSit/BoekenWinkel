@@ -4,21 +4,63 @@ include "../include/navbar.php" ?>
 
 <div class="wrapper">
 
-<form action="contact.php" method="post" >
+<?php 
+$nameErr = $emailErr = $vraagErr = "";
+$name = $email = $vraag = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if(!empty($_POST['name'])){
+      $nameErr = "Name is required";
+    } else {
+         $name = test_input($_POST["name"]);
+}
+
+    if(!empty($_POST['email'])){
+        $emailErr = "Email is required";
+        } else {
+             $email = test_input($_POST["email"]);
+        }
+
+        if(!empty($_POST['vraag'])){
+            $vraagErr = "Vraag is required";
+            } else {
+                 $vraag = test_input($_POST["vraag"]);
+            }
+        }
+ 
+
+function test_input($data) {
+  $data = trim($data); /*   verwijdert white space links en rechts  en zorgt ervoor dat er niet heel spaties er tussen in zitten*/
+  $data = stripslashes($data); /* Verwijdert / \*/
+  $data = htmlspecialchars($data); /* maakt < > gewoon tekst ervan dit voorkomt dat mensen geen html fncties can toepassen */
+  return $data; /* data word terug gestuurd zonder / \ < > of spatie     */
+}
+
+?>
+
+<!-- htmlspecialchars($_SERVER["PHP_SELF"]) htmlspecialchars convert verandert <  >  naar &it en &gt
+    ($_SERVER["PHP_SELF"]) stuurt plaats van de data naar een andere page naar de zelfde page  -->
+<form action="contact.php" method="post"  acion="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <h1> Wij helpen je graag veder <br> stuur ons een bericht  </h1>
 
     <div class="section1">
     <label for="name">Naam</label>
-    <input type="text" name="name" id="name"><br>
+    <input type="text" name="name" id="name" required>
+    <span class="error"><?php echo $nameErr; ?> </span>
+    <br><br>
     </div>
-
+        
     <div class="section2">
     <label for="email">E-mail</label>
-    <input type="email" name="email" id="email"><br>
+    <input type="email" name="email" id="email" required>
+    <span class="error"><?php echo $emailErr; ?> </span>
+    <br><br>
     </div>
 
     <div class="section3">
-    <textarea  name="vraag" id="vraag" cols="20" rows="3"></textarea><br>
+    <textarea  name="vraag" id="vraag" cols="20" rows="3" required></textarea>
+    <span class="error"><?php echo $vraagErr;?> </span>
+    <br><br>
     </div>
 
     <div class="section4">
@@ -27,19 +69,32 @@ include "../include/navbar.php" ?>
 
 </form>
 
+<?php 
 
-<?php
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $vraag;
+echo "<br>";
 
-if(isset($_POST['submit'])){
+?>
+
+
+<!--if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $vraag = $_POST['vraag'];
 
-    echo "$name <br>, $email <br>, $vraag <br>";
- }
+    if(!empty($name) && !empty($email) && !empty($vraag)){
+        $to = "" . $email . "";
 
 
-?>
+    echo "$name <br> $email <br> $vraag <br>";
+ } -->
+
+
+
 
 </div>
 
