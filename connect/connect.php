@@ -3,7 +3,7 @@
 /* Maak de connection string voor MySQL */
 
 $host = 'localhost';
-
+/* De $dbname moet je wel elk keer veranderen naar de naam van je database of anders gaat connect je naar een andere datbase */
 $dbname = 'boekenwinkel';
 
 $username = 'root';

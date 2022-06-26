@@ -1,6 +1,7 @@
-<?php include "../include/head.php";
-
- include "../include/navbar.php";?>
+<?php 
+    include "../include/head.php";
+    include "../include/navbar.php";
+ ?>
 <!--
 <div class="column">
     <table cellspacing="10px">
@@ -36,31 +37,31 @@
 </tr>
     </table> !-->
 
-    <h1 style="font-size:50px"> The top 10 books of the world </h1>
+<h1 style="font-size:50px"> The top 10 books of the world </h1>
 
-    <?php include "../connect/connect.php";
+<?php include "../connect/connect.php";
 
-$sql = "SELECT * FROM boek ORDER BY rating DESC";
+    $sql = "SELECT * FROM boek ORDER BY rating DESC LIMIT 10";
 
-$sth = $db->prepare($sql);
+    $sth = $db->prepare($sql);
 
-$sth -> execute();
+    $sth -> execute();
 
-$nummer = 1;
+    $nummer = 1;
 
 while($row = $sth->fetch()) {
-echo "<tr> <div class= 'box'>";
+    echo "<tr> <div class= 'box'>";
 
-Echo "<td> <a href='details.php?id={$row['id']}'> <div class='ruimte'> De title {$row['Title']}</div></a></td>" ;	  
-/* DE ?ID=$row['id'] komt er boven aan de display id=1 Door de get function bij de details.php word de id gehaald en daardoor kan ie de specifieke
-data uit de database halen van die id | de schijding maak je met?*/
-Echo "<td>" . "<div class='ruimte'>" . 'rating' . "  " .$row["rating"] . "</div> " . "</td>";
-Echo "<td>" . "<div class='ruimte'>" . "De Prijs" .$row["prijs"] . "</div> " . "</td>" ;
-Echo "<td> <figure class='right'>" . "<img  class='boek_foto' src='../img/" . $row["afbeelding"] . "'> </figure<td>" ;
-/*Echo '<a href="details.php?id=" . $row['id'] ."> Details </a>';*/
+    Echo "<td> <a href='details.php?id={$row['id']}'> <div class='ruimte'> De title {$row['Title']}</div></a></td>" ;	  
+    /* DE ?ID=$row['id'] komt er boven aan de display id=1 Door de get function bij de details.php word de id gehaald en daardoor kan ie de specifieke
+    data uit de database halen van die id | de schijding maak je met?*/
+    Echo "<td>" . "<div class='ruimte'>"  .$row["rating"] . "</div> " . "</td>";
+    Echo "<td>" . "<div class='ruimte'>" . "De Prijs" .$row["prijs"] . "</div> " . "</td>" ;
+    Echo "<td> <figure class='right'>" . "<img  class='boek_foto' src='../img/" . $row["afbeelding"] . "'> </figure<td>" ;
+    /*Echo '<a href="details.php?id=" . $row['id'] ."> Details </a>';*/
 
-echo "</tr>  </div>";
-$nummer++;
+    echo "</tr>  </div>";
+    $nummer++;
 }
 ?>
 
@@ -69,16 +70,10 @@ $nummer++;
 <!--<div class="footer">
 <div class="footer-text-left">footer</div>
 </div>  !-->
-
-
-
 <!--   SELECt *FROM boek ORDER BY rating  DESC LIMIT 10; 
-
-
 Echo "<td> . $nummer . </td>"
 Echo "<td>" . $row['titel'] . "</td>"
 -->
-
 <?php include "../include/footer.php" ?>
 
 

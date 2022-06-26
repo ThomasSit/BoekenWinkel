@@ -12,12 +12,6 @@ body{
     background-color:#f6cd8b
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
 .item {
     flex-grow: 2;
     flex-row:1 ;
@@ -33,7 +27,7 @@ body{
 /* Navbar */
 ul{
 
-    background-color:#1d2d44;
+    background-color:#442f1d;
     padding:20px;
 }
 
@@ -84,11 +78,38 @@ header {
     align-items: center;
 }
 
+.idk{
+    box-shadow:
+    inset 10px 10px 0 rgba(#523E6B, 0.2),
+    10px 10px 0 rgba(#523E6B, 0.2);
+    height: 200px;
+    border:1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    display: flex;
+    
+    width: 300px;
+}
+.two {
+    justify-content: center;
+    align-items: center;
+    background: #B388EB;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px -15px 0 rgba(#523E6B, 0.2);
+    box-shadow: inset 10px 10px 0 rgba(#523E6B, 0.2), 10px 10px 0 rgba(#523E6B, 0.2);
+  }
+
 .box{
-    border:  solid #428dcc;
-    padding-left: 320px;
-   margin-left:25%;
-   margin-right: 25%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+   margin-left:auto;
+   margin-right: auto;
     margin-bottom:10px;
     
 }
@@ -127,9 +148,9 @@ padding-top: 300px;
 
 .boek_foto{
     height: auto;
-    width: auto;
-    max-width: 30%;
-    max-height: 30%;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
    
     
 }
@@ -151,9 +172,7 @@ padding-top: 300px;
     font-size: 2,8vh;
 }
 
-/*.row{
-    display: table;
-}*/
+
 
 /* Contact formulier wrapper */
 .wrapper{
@@ -205,6 +224,11 @@ text-align: center;
 .error{
     color:red;
     text-decoration: red;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
 }
 
 
