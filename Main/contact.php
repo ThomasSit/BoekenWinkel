@@ -44,14 +44,14 @@ function test_input($data) {
     <h1> Wij helpen je graag veder <br> stuur ons een bericht  </h1>
 
     <div class="section1">
-    <label for="name">Naam</label>
+    <label for="name">Naam </label>
     <input type="text" name="name" id="name" required>
     <span class="error"><?php echo $nameErr; ?> </span>
     <br><br>
     </div>
         
     <div class="section2">
-    <label for="email">E-mail</label>
+    <label for="email">E-mail </label>
     <input type="email" name="email" id="email" required>
     <span class="error"><?php echo $emailErr; ?> </span>
     <br><br>
