@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: fitter;
+    font-size: 18px;
+    line-height: 1.4em;
+    font-style:normal;
+    font-weight: 400;
+}
+
+body{
+    background-color:#f6cd8b
+}
+
+.item {
+    flex-grow: 2;
+    flex-row:1 ;
+    max-height: 900px;
+    border:1px solid #000000;
+}
+
+/* Wij gebruiken + om ruimte tussen de 2 items te maken */
+.item + .item {
+    margin-left: 2%;
+}
+
+/* Navbar */
+ul{
+
+    background-color:#442f1d;
+    padding:20px;
+}
+
+li{
+
+    display: inline-flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    text-align: center;
+}
+
+.white{
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    color:red;
+}
+
+
+.logo {
+    display: flex;
+    display: inline;
+    height: 100px;
+    width: 200px;
+    background-blend-mode: normal;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* Voor de Top 10 lijs*/
+.column{
+  display: flex;
+    flex-direction: column ;
+
+    /*  items zetten in center*/
+    justify-content: center;
+    align-items: center;
+}
+
+.idk{
+    box-shadow:
+    inset 10px 10px 0 rgba(#523E6B, 0.2),
+    10px 10px 0 rgba(#523E6B, 0.2);
+    height: 200px;
+    border:1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    display: flex;
+    
+    width: 300px;
+}
+.two {
+    justify-content: center;
+    align-items: center;
+    background: #B388EB;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px -15px 0 rgba(#523E6B, 0.2);
+    box-shadow: inset 10px 10px 0 rgba(#523E6B, 0.2), 10px 10px 0 rgba(#523E6B, 0.2);
+  }
+
+.box{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+   margin-left:auto;
+   margin-right: auto;
+    margin-bottom:10px;
+    
+}
+
+.ruimte{
+    width: 200px;
+}
+
+/* De Top lijst boeken 1 tot 10 informatie pagina */
+h1{
+    text-align: center;
+}
+
+.columnn{
+    float: left;
+    padding: 25px;
+    width: 25%;
+    justify-content: center;
+}
+
+.foto{
+
+object-fit: contain;
+    height: 10%;
+    width: 20%;
+
+}
+
+.prijs_rechts{
+float: right;
+    justify-content: right;
+    overflow: hidden;
+padding-top: 300px;
+    padding-right: 50px;
+}
+
+.boek_foto{
+    height: auto;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    
+}
+
+/* detail page css */
+.detail_boek_foto{
+    right:0;
+    position:absolute;
+    width: 35vh;
+    height: 45vh;
+    margin-right: 20vh;
+}
+
+.doos{
+    width: 300px;
+    height: 100px;
+    margin-right: auto;
+    margin-left:20vh;
+    font-size: 2,8vh;
+}
+
+
+
+/* Contact formulier wrapper */
+.wrapper{
+    width: 500px;
+    height: 400px;
+    background: white;
+    box-shadow: 8px 5px 2px 0px #1d2d44;
+    /*werk als volgt 8px is horizontaal 5px is verticaal 2px is erg het blurt en 0px is hoever die uitspreid en daarna de kleur van de shawdow */
+    padding: 30px;
+    border-radius: 10px;
+    border:1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    margin-bottom:100px;
+ /*Translate werkt als volgt je hebt de x en y as en met aangeven met % of px 
+ kan je de box of item verplaatsen          */
+}
+
+.section1, .section2 ,.section3, .section4{
+    text-align: center;
+    padding-top: 20px;
+
+}
+.section1{
+    padding-top:60px;
+}
+
+.visitekaartje{
+    margin-top:700px;
+    display: inline;
+    float:left;
+    border:solid 1px black;
+  height: 500;
+  width: auto;
+  mix-blend-mode: color blue;
+
+}
+/* footer*/
+.footer{
+
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 40px;
+    background-color: #b6b6b6;
+    color:white;
+}
+
+.footer-text-left{
+text-align: center;
+
+  padding: 5px;
+    word-spacing:20px;
+    color:white;
+}
+
+.error{
+    color:red;
+    text-decoration: red;
+    font-size: large;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
